@@ -16,5 +16,7 @@
       3.  Facil uso, el programa se creo pensando en que sea de facil uso, con mensajes claros.
 
   ![image](https://github.com/GatoMiau03/Taller01sismos/assets/142507343/f2c2ff90-bc55-4f1d-b2ea-859bad104a6a)  
-  ![image](https://github.com/GatoMiau03/Taller01sismos/assets/142507343/80454c4e-ac74-4248-878f-e5cd8b907022)
+  ![image](https://github.com/GatoMiau03/Taller01sismos/assets/142507343/80454c4e-ac74-4248-878f-e5cd8b907022)  
+  ![image](https://github.com/GatoMiau03/Taller01sismos/assets/142507343/70d539e0-1a34-4069-9dfb-cc8edb6844db)
+
 
