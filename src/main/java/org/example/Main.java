@@ -1,10 +1,13 @@
 package org.example;
 import java.util.Scanner;
 import java.util.Random;
+import java.text.DecimalFormat;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static double[][] lecturasSismicas = new double[7][24];
+    private static DecimalFormat formatoDecimal = new DecimalFormat("#.##");
+
 
     public static void main(String[] args) {
         menu();
@@ -57,7 +60,7 @@ public class Main {
 
         System.out.println("Datos ingresados correctamente.");
     }
-    public static double buscarMayorSismo(double[][] sismos) {
+    public static String buscarMayorSismo(double[][] sismos) {
         double mayorSismo = 0.0;
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 24; j++) {
@@ -66,7 +69,7 @@ public class Main {
                 }
             }
         }
-        return mayorSismo;
+        return formatoDecimal.format(mayorSismo);
     }
     public static int contarSismos(double[][] sismos){
         int contador = 0;
@@ -85,9 +88,8 @@ public class Main {
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 24; j++) {
                 if (sismos[i][j] >= 7.0) {
-                    mensajes.append("Alerta!!! Se debe evacuar zona costera! (Sismo de magnitud ")
-                            .append(sismos[i][j])
-                            .append(")\n");
+                    mensajes.append("Alerta!!! Se debe evacuar zona costera!")
+                            .append("\n");
                 }
             }
         }
