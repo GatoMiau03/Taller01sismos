@@ -14,3 +14,7 @@
       1.  Es un programa interactivo, ya que permite que el usuario interactue con el menu.
       2.  El uso de la clase random, esta clase se utiliza para generar los valores dentro de la matriz, tratando de imitar la aleatoriedad de los sismos.
       3.  Facil uso, el programa se creo pensando en que sea de facil uso, con mensajes claros.
+
+  ![image](https://github.com/GatoMiau03/Taller01sismos/assets/142507343/f2c2ff90-bc55-4f1d-b2ea-859bad104a6a)  
+  ![image](https://github.com/GatoMiau03/Taller01sismos/assets/142507343/80454c4e-ac74-4248-878f-e5cd8b907022)
+
