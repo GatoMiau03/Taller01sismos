@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         menu();
     }
+
     public static void menu() {
         boolean salir = false;
 
@@ -50,10 +51,52 @@ public class Main {
 
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 24; j++) {
-                lecturasSismicas[i][j] = random.nextDouble() * 9.9; // Valores aleatorios entre 0.0 y 9.9
+                lecturasSismicas[i][j] = random.nextDouble() * 9.9;
             }
         }
 
         System.out.println("Datos ingresados correctamente.");
+    }
+    public static double buscarMayorSismo(double[][] sismos) {
+        double mayorSismo = 0.0;
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 24; j++) {
+                if (sismos[i][j] > mayorSismo) {
+                    mayorSismo = sismos[i][j];
+                }
+            }
+        }
+        return mayorSismo;
+    }
+    public static int contarSismos(double[][] sismos){
+        int contador = 0;
+        for (int i = 0; i < 7; i++)   {
+            for (int j = 0; j < 24; j++) {
+                if (sismos[i][j] >= 5.0){
+                    contador++;
+                }
+            }
+        }
+        return contador;
+    }
+    public static String enviarSMS(double[][] sismos) {
+        StringBuilder mensajes = new StringBuilder();
+
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 24; j++) {
+                if (sismos[i][j] >= 7.0) {
+                    mensajes.append("Alerta!!! Se debe evacuar zona costera! (Sismo de magnitud ")
+                            .append(sismos[i][j])
+                            .append(")\n");
+                }
+            }
+        }
+        return mensajes.toString();
+    }
+    public static boolean salir() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("¿Desea salir del programa? (S/N)");
+        String respuesta = scanner.nextLine().trim().toLowerCase();
+        return respuesta.equals("s");
     }
 }
